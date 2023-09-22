@@ -6,12 +6,12 @@ setInterval(()=>{
     let M=date.getMinutes()
     let S=date.getSeconds()
     if (am) {
-        clockDisplay.innerHTML=H+':'+M+':'+S+' AM'
+        clockDisplay.innerHTML=(H<10?'0'+H:H)+':'+(M<10?'0'+M:M)+':'+(S<10?'0'+S:S)+' AM'
         
     }else{
        
         H=H>12?H-12:H
-        clockDisplay.innerHTML=H+':'+M+':'+S+' PM'
+        clockDisplay.innerHTML=(H<10?'0'+H:H)+':'+(M<10?'0'+M:M)+':'+(S<10?'0'+S:S)+' PM'
     }
 },500)
 var am =true    
